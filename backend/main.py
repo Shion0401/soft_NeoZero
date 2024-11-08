@@ -28,7 +28,6 @@ def get_user(user_id: int):
         filter(UserInformationTable.id == user_id).first()
     return user
 
-
 # ユーザ情報登録
 @app.post("/users/register")
 def post_user(user: RegisterUser):
