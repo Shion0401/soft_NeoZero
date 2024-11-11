@@ -15,13 +15,20 @@ export default function HomePage() {
 
     const handleSubmit = async (e) => {
         e.preventDefault(); // ページのリロードを防ぐ
-    
         try {
           const response = await axios.post('http://localhost:8000/users/login', {
             email: email,
             password: password
           });
-          setResponseMessage('ログインできたよ');
+          if (response.data === null){
+            setResponseMessage('間違ってるよ');
+          }else{
+            setResponseMessage('ログインできたよ');
+            // const user_id = response.data;  // 例えば response.data がユーザーID
+            // const url = `http://localhost:3000/home?user_id=${user_id}`;  // URLを作成
+            // router.push(url);  // ページ遷移
+            router.push(`http://localhost:3000/home?user_id=${response.data}`);  // 1行でページ遷移
+          }
         } catch (error) {
           setResponseMessage('エラーが発生しました。');
           console.error(error);
