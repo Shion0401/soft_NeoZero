@@ -9,7 +9,7 @@ class UserInformationTable(Base):
     id = Column(Integer, primary_key=True, autoincrement=True)
     name = Column(String(30), nullable=False)
     email = Column(String(128), nullable=False)
-    password = Column(String(16), nullable=False)
+    password = Column(String(64), nullable=False)
 
 # モデル定義 
 class RegisterUser(BaseModel):
