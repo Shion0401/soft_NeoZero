@@ -1,6 +1,7 @@
 from fastapi import FastAPI
 from database import session
 from model import UserInformationTable, RegisterUser, LoginUser
+from pass_hash import createHash
 from fastapi.middleware.cors import CORSMiddleware
 import random
 
@@ -31,17 +32,19 @@ def get_user(user_id: int):
 # ユーザ情報登録
 @app.post("/users/register")
 def post_user(user: RegisterUser):
+    password = createHash(user.password)
     db_test_user = UserInformationTable(name=user.name, 
-                                        email=user.email, password=user.password)
+                                        email=user.email, password=password)
     session.add(db_test_user)
     session.commit()
     
 # ユーザログイン
 @app.post("/users/login")
 def post_user(user: LoginUser):
+    login_password = createHash(user.password)
     get_login_user = session.query(UserInformationTable).\
         filter((UserInformationTable.email == user.email) &
-               (UserInformationTable.password == user.password)).first()
+               (UserInformationTable.password == login_password)).first()
     if get_login_user:
         return get_login_user.id  # ユーザーが見つかった場合、IDを返す
     else:
