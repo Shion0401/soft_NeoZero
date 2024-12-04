@@ -1,15 +1,12 @@
-# Node.jsイメージをベースに
-FROM node:18.18.0
+FROM node:16
 
-# 作業ディレクトリを設定
 WORKDIR /app
 
-# パッケージのインストール
-COPY ./frontend/package.json ./frontend/package.json ./
+COPY package.json package-lock.json ./
 RUN npm install
 
-# アプリケーションのコードをコピー
-COPY ./frontend /app
+COPY public ./public
 
-# 開発サーバーを起動
-CMD ["npm", "run", "dev"]
+EXPOSE 3000
+
+CMD ["npm", "start"]
