@@ -1,0 +1,57 @@
+/* ユーザのログインページのCSS */
+body{
+    background-color: #ffffff;
+    display:flex;
+    flex-direction:column;
+    align-items: center;
+}
+
+.login{
+    background-color: #FFD5EC;
+    width:50%;
+    margin:  auto; 
+    display:flex;
+    flex-direction:column;
+    align-items: center;
+}
+
+#pawlovers-img{
+    width:50%;
+}
+
+#item{
+    width:70%;
+}
+
+::placeholder {
+	text-align: center;
+}
+
+input{
+    width:70%;
+    height:40px;
+}
+
+button{
+    width: 25%; 
+    height:50px;
+    border-radius: 20px;
+    background: #b09bd1;               
+}
+
+#login{
+    margin-bottom: 20px;
+}
+
+#registr{
+    display: flex;
+    justify-content: center;
+}
+
+hr{ 
+    border:none;
+    border-top-style:dashed; 
+    border-top-width:1px; 
+    width: 90%; 
+    border-top-color:#000000; 
+}

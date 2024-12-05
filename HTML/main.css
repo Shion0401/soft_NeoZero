@@ -1,0 +1,38 @@
+/* ユーザのトップページのCSS */
+body {
+    background-color: #FFD5EC;
+}
+
+.top{
+    display: flex;
+    justify-content: space-around;
+}
+
+#pawlovers-img{
+    width: 30%; 
+    border: 1px solid;                    
+}
+
+button{
+    font-size: xx-large; 
+    width: 30%; 
+    background: #b09bd1;
+}
+
+.bottom{
+    display: flex;
+    justify-content: space-around;
+}
+
+#advertisement{
+    width: 20%; 
+    height:500px;
+    text-align: center;
+    border: 1px solid;                    
+}
+
+#media{
+    width: 50%; 
+    height:500px;
+    border: 1px solid;                    
+}
