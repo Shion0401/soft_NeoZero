@@ -1,0 +1,63 @@
+/* ユーザのトップページのCSS */
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #FFD5EC;
+    overflow: hidden;
+}
+
+.user-top-page {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.top {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px;
+    flex: 0 0 auto;
+}
+
+#pawlovers-img {
+    width: 30%; 
+    max-height: 20vh;
+    border: 1px solid black;
+    object-fit: contain;
+}
+
+button {
+    font-size: xx-large; 
+    width: 30%; 
+    height: 10vh;
+    background: #b09bd1;
+    border: none;
+    cursor: pointer;
+}
+
+.bottom {
+    display: flex;
+    justify-content: space-around;
+    flex: 1 0 auto;
+    overflow: hidden;
+}
+
+#advertisement {
+    width: 20%; 
+    height: 100%;
+    text-align: center;
+    border: 1px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#media {
+    width: 50%; 
+    height: 100%;
+    border: 1px solid black;
+}

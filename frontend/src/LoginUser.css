@@ -1,0 +1,82 @@
+/* login.css */
+body {
+    background-color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.login-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 90%;
+    max-width: 20000px;
+}
+
+.pawlovers-logo {
+    width: 80%;             /* 画像を適度なサイズに調整 */
+    max-width: 600px;       /* 最大幅を設定 */
+    display: block;
+    margin: 20px auto;      /* 上下に余白を設定 */
+}
+
+.login-form {
+    background-color: #FFD5EC;
+    width: 100%;
+    padding: 20px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form-group {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 20px;
+}
+
+label {
+    margin: 5px 0;
+    font-size: medium;
+    color: #000000;
+}
+
+input {
+    width: 100%;
+    height: 40px;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: medium;
+    text-align: center;
+}
+
+.login-button, .register-button {
+    width: 50%;
+    height: 50px;
+    margin: 10px;
+    border-radius: 5px;
+    background: #b09bd1;
+    color: #000000;
+    font-size: medium;
+    border: none;
+    cursor: pointer;
+}
+
+.login-button:hover, .register-button:hover {
+    background: #9a88c7;
+}
+
+.separator {
+    margin: 10px 0;
+    font-size: medium;
+    color: #000000;
+    text-align: center;
+}
