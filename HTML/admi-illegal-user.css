@@ -1,0 +1,177 @@
+/* 管理者の違反ユーザ管理画面のCSS */
+body {
+    text-align: center; /* 中央揃え */
+    font-size: medium; /* 文字の大きさ */
+    background: #b09bd1; /* 背景色 */
+    display: flex;
+    flex-flow: column; /* 縦並び */
+    align-items: center; /* 上下中央寄せ */
+    justify-content: center; /* 左右中央寄せ */
+}
+
+.title {
+    width: 60%; 
+    font-size: xx-large; /* 文字の大きさ */
+    border-radius: 30px; /* 丸み */
+    background: #fff; /* 背景色 */
+    color: #b09bd1; /* 文字の色 */
+    margin: 40px; /* 上下左右の余白(外側) */
+    padding: 10px 10px; /* 上下左右の余白(内側) */
+}
+
+.main {
+    width: 90%; 
+    display: flex;
+    justify-content: space-between; /* 横並び */
+}
+
+.menu {
+    flex: 1; /* 比率 */
+    display: flex;
+    flex-flow: column; /* 縦並び */
+    align-items: center; /* 上下中央寄せ */
+    justify-content: center; /* 左右中央寄せ */
+}
+
+button {
+    width: 100%;
+    font-size: x-large; /* 文字の大きさ */
+    border-radius: 20px; /* 丸み */
+    background: #FFD5EC; /* 背景色 */
+    color: #000; /* 文字の色 */
+    margin: 20px auto; /* 上下左右の余白(外側) */
+    padding: 50px 30px; /* 上下左右の余白(内側) */
+    border: none; /* 枠線削除 */
+    cursor: pointer; /* カーソルを手のひらに変更 */
+}
+
+button:hover {
+    background: #ff99cc;
+}
+
+.right {
+    flex: 4; /* 比率 */
+    padding: 20px; /* 上下左右の余白(内側) */
+    display: flex;
+    flex-flow: column; /* 縦並び */
+    align-items: center; /* 上下中央寄せ */
+}
+
+.white {
+    width: 90%; 
+    background: #fff; /* 背景色 */
+    border-radius: 10px; /* 丸み */
+    padding: 10px; /* 上下左右の余白(内側) */
+    margin: 10px; /* 上下左右の余白(外側) */
+    display: flex;
+    flex-flow: column; /* 縦並び */
+    align-items: center; /* 上下中央寄せ */
+}
+
+.explanation {
+    width: 90%; 
+    display: flex;
+    justify-content: space-between; /* 横並び */
+}
+
+.account{
+    flex: 2; /* 比率 */
+    text-align: left; /* 左揃え */
+}
+
+.report{
+    flex: 1; /* 比率 */
+    text-align: left; /* 左揃え */   
+}
+
+.user{
+    width: 90%;
+    max-height: 500px; /* 最大高さを設定 */
+    overflow-y: auto; /* 縦方向にスクロール可能に */
+}
+
+.item{
+    width: 100%; 
+    display: flex;
+    justify-content: space-between; /* 横並び */
+}
+
+.name{
+    flex: 2; /* 比率 */
+    width: 100%; 
+    border-radius: 30px; /* 丸み */
+    background: #FFD5EC; /* 背景色 */
+    margin: 10px; /* 上下左右の余白(外側) */
+    padding: 10px; /* 上下左右の余白(内側) */
+}
+
+.detail{
+    flex: 1; /* 比率 */
+    width: 100%; 
+    font-size: x-large; /* 文字の大きさ */
+    border-radius: 30px; /* 丸み */
+    background: #FFD5EC; /* 背景色 */
+    margin: 10px; /* 上下左右の余白(外側) */
+    padding: 10px; /* 上下左右の余白(内側) */
+}
+
+/* モーダル */
+#modal {
+    background: rgba(0, 0, 0, 0.5); /* 背景 */
+    display: none; /* 非表示 */
+    position: fixed; 
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    flex-flow: column; /* 縦並び */
+    align-items: center; /* 上下中央寄せ */
+    justify-content: center; /* 左右中央寄せ */
+}
+
+.content {
+    width: 60%;
+    border-radius: 20px; /* 丸み */
+    padding: 60px; /* 上下左右の余白(内側) */
+    background: #fff; /* 背景 */
+}
+
+#comment {
+    font-size: xx-large; /* 文字の大きさ */
+    margin: 20px; /* 上下左右の余白(外側) */
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-between; /* 横並び */
+}
+
+#confirm {
+    height: 100px;
+    width: 50%;
+    font-size: xx-large; /* 文字の大きさ */
+    border-radius: 30px; /* 丸み */
+    margin:  30px; /* 上下左右の余白(外側) */
+    padding: 0; /* 上下左右の余白(内側) */
+    background: #ff9999; /* 背景 */
+}
+
+
+#cancel {
+    height: 100px;
+    width: 50%;
+    font-size: xx-large; /* 文字の大きさ */
+    border-radius: 30px; /* 丸み */
+    margin:  30px; /* 上下左右の余白(外側) */
+    padding: 0; /* 上下左右の余白(内側) */
+    background: #99ccff; /* 背景 */
+}
+
+#confirm:hover {
+    background: #ff6666;
+}
+
+#cancel:hover {
+    background: #66b2ff;
+}
+
+
+

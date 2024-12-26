@@ -1,0 +1,81 @@
+<!--ユーザの会員情報登録のページ-->
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <link href="information.css" rel="stylesheet" />
+    <meta name="viewport" content="width=device-width" />
+    <title>PawLovers_information</title>
+  </head>
+
+  <body>
+    <div id="information">会員情報登録</div>
+
+    <form id="form">
+
+    <div class="item">
+        <label for="email">メールアドレス<span>※</span></label>
+        <input type="email" id="email" name="email" required/>
+    </div>
+
+    <div class="item">
+        <label for="name">ニックネーム<span>※</span><br>(ペットの名前)</label>
+        <input type="text" id="name" name="name" required/>
+    </div>
+
+    <div class="item">
+        <label for="password">パスワード<span>※</span></label>
+        <input type="password" id="password" name="password" required/>
+    </div>
+
+    <p id="note">※半角英数字8~16文字</p>
+
+    <div class="item">
+        <label for="password-confirm">パスワード<span>※</span><br>(再確認)</label>
+        <input type="password" id="password-confirm" name="password-confirm" required/>
+    </div>
+
+    <div class="item">
+      <label for="comment">フリーコメント</label>
+      <textarea id="comment" placeholder="ペットの性別や年齢、コメントなど(100文字以内)" name="comment"></textarea>
+    </div>
+
+    </form>
+
+    <p id="error-message"></p>
+
+    <button type="submit" id="submit">OK</button>
+
+    <script>
+      const submit = document.getElementById("submit"); //OKボタン取得
+      const errorMessage = document.getElementById("error-message"); //エラーメッセージ取得
+
+      // OKボタンが押された時
+      submit.addEventListener("click", () => {
+          const email = document.getElementById("email").value; //メールアドレス取得
+          const name = document.getElementById("name").value; //ニックネーム取得
+          const password = document.getElementById("password").value; //パスワード取得
+          const passwordConfirm = document.getElementById("password-confirm").value; //パスワード(確認用)取得
+          const comment = document.getElementById("comment").value; // フリーコメント取得
+
+          const passwordRegex = /^[a-zA-Z0-9]{8,16}$/; //パスワードの形式チェック
+
+          if (!email || !name || !password || !passwordConfirm) { // 必須項目が入力されていない場合
+              errorMessage.textContent = "※必須項目が入力されていません。";
+              return;
+          }else if (!passwordRegex.test(password) || comment.length > 100) { //パスワードまたはフリーコメントの制限が守られていない場合
+              errorMessage.textContent = "※パスワードまたはフリーコメントの制限が守られていません。";
+              return;
+          }else if (password !== passwordConfirm) { // パスワードと確認用パスワードが一致しない場合
+              errorMessage.textContent = "※パスワードが一致しません。";
+              return;
+          }else{ //成功時
+              window.location.href = "./login.html";
+          }
+
+      });
+
+    </script>
+
+  </body>
+</html>

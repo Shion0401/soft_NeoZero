@@ -1,0 +1,54 @@
+<!--管理者のログインページ -->
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <link href="admi-login.css" rel="stylesheet" />
+    <meta name="viewport" content="width=device-width" />
+    <title>PawLovers_admi-login</title>
+  </head>
+
+  <body>
+    <img src="pawlovers-admi.jpg" alt="pawlovers logo" id="pawlovers-img" />
+
+    <form class="login">
+        <div class="form-group">
+            <label for="email">メールアドレス</label>
+            <input type="email" id="email" placeholder="メールアドレスを入力してください" name="email" required />
+        </div>
+
+        <div class="form-group">
+            <label for="password">パスワード</label>
+            <input type="password" id="password" placeholder="パスワードを入力してください" name="password" required />
+        </div>
+
+        <p id="error-message"></p>
+
+        <button type="button" id="login-button">ログイン</button>
+    </form>
+
+    <script>
+      const loginButton = document.getElementById('login-button'); //ログインボタン取得
+      const errorMessage = document.getElementById('error-message'); //エラーメッセージ取得
+
+      // ログインボタンが押された時
+      loginButton.addEventListener('click', () => {
+          const email = document.getElementById('email').value; //メールアドレス取得
+          const password = document.getElementById('password').value; //パスワード取得
+
+          // 条件分岐
+          if (!email) { //メールアドレスが空白の時
+              errorMessage.textContent = '※メールアドレスを入力してください。'; //エラーメッセージを表示させる
+              return;
+          }else if (!password) { //メールアドレスが空白の時
+              errorMessage.textContent = '※パスワードを入力してください。'; //エラーメッセージを表示させる
+              return;
+          }else if (email === 'admin@example.com' && password === 'password123') { //ログイン成功時
+              window.location.href = './admi-top.html'; // トップ画面に遷移
+          } else { //ログイン失敗時
+              errorMessage.textContent = '※メールアドレスまたはパスワードが間違っています。'; //エラーメッセージを表示させる
+          }
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,76 @@
+<!--管理者の広告管理画面 -->
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <link href="admi-advertisement.css" rel="stylesheet" />
+    <meta name="viewport" content="width=device-width" />
+    <title>PawLovers_admi-advertisement</title>
+  </head>
+
+  <body>
+    <div class="title">広告管理</div>
+
+    <div class="main">
+
+        <div class="menu">      
+            <button onclick="location.href='./admi-advertisement.html'">広告管理</button>
+            <button onclick="location.href='./admi-illegal-user.html'">違反ユーザ管理</button>
+            <button id="logout">ログアウト</button>
+        </div>
+
+        <div class="right">
+            <div class="white">
+              <p>企業名</p>
+              <div class="company">
+                <button class="item" onclick="location.href='./admi-advertisement-details.html'">あ</button>
+                <button class="item" onclick="location.href='./admi-advertisement-details.html'">い</button>
+                <button class="item" onclick="location.href='./admi-advertisement-details.html'">う</button>
+                <button class="item" onclick="location.href='./admi-advertisement-details.html'">え</button>
+                <button class="item" onclick="location.href='./admi-advertisement-details.html'">お</button>
+                <button class="item" onclick="location.href='./admi-advertisement-details.html'">かきく</button>
+                <button class="item" onclick="location.href='./admi-advertisement-details.html'">き</button>
+                <button class="item" onclick="location.href='./admi-advertisement-details.html'">くあああああああああああああああああああああああああああああああああああああああああああああああ</button>
+              </div>
+            </div>
+            <button id="register" onclick="location.href='./admi-newadvertisement.html'">新規登録</button>
+        </div>
+
+    </div>
+    
+  <!-- モーダル -->
+  <div id="modal">
+    <div class="content">
+      <p id="comment">ログアウトしますか？</p>
+      <div class="buttons">
+        <button id="confirm">はい</button>
+        <button id="cancel">いいえ</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const logout = document.getElementById("logout"); //ログアウトボタン取得
+    const modal = document.getElementById("modal"); //モーダル取得
+    const confirm = document.getElementById("confirm"); //はいボタン取得
+    const cancel = document.getElementById("cancel"); //いいえボタン取得
+
+    // ログアウトボタンが押されたとき
+    logout.addEventListener("click", () => {
+      modal.style.display = "flex"; // モーダルを表示
+    });
+
+    // はいボタンが押されたとき
+    confirm.addEventListener("click", () => {
+      location.href = "./admi-login.html"; // ログインページに遷移
+    });
+
+    // いいえボタンが押されたとき
+    cancel.addEventListener("click", () => {
+      modal.style.display = "none"; // モーダルを非表示
+    });
+
+  </script>
+
+  </body>
+</html>

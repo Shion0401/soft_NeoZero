@@ -1,0 +1,39 @@
+<!--ユーザの投稿画面 -->
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <link href="post.css" rel="stylesheet" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PawLovers - 投稿</title>
+  </head>
+
+  <body>
+
+    <div class="white">
+        <div class="post">
+
+          <div class="file">
+            <input id="file" type="file" />
+          </div>
+
+          <div class="form">
+            <div class="form-group">
+              <label for="title">タイトル</label>
+              <input id="title" type="text" placeholder="(11字以内)" name="title" />
+            </div>
+            <div class="form-group">
+              <label for="caption">キャプション</label>
+              <textarea id="caption" placeholder="(50字以内)" name="caption"></textarea>
+            </div>
+          </div>         
+        </div>
+    </div>
+
+    <div class="buttons">
+        <button class="button return" onclick="location.href='./main.html'">戻る</button>
+        <button class="button register" onclick="location.href='./main.html'">登録</button>
+    </div>
+
+  </body>
+</html>

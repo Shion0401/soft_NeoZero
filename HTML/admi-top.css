@@ -1,0 +1,95 @@
+/* 管理者のトップページのCSS */
+body {
+    text-align: center; /* 中央揃え */
+    font-size: medium; /* 文字の大きさ */
+    background: #b09bd1; /* 背景色 */
+    display: flex;
+    flex-flow: column; /* 縦並び */
+    align-items: center; /* 上下中央寄せ */
+    justify-content: center; /* 左右中央寄せ */
+}
+
+#title {
+    width: 60%;
+    font-size: xx-large; /* 文字の大きさ */
+    border-radius: 30px; /* 丸み */
+    background: #fff; /* 背景色 */
+    color: #b09bd1; /* 文字の色 */
+    margin: 40px; /* 上下左右の余白(外側) */
+    padding: 10px 10px; /* 上下左右の余白(内側) */
+}
+
+#white{
+    width: 50%;
+    border-radius: 10px; /* 丸み */
+    background: #fff; /* 背景色 */ 
+    display: flex;
+    flex-flow: column; /* 縦並び */
+    align-items: center; /* 上下中央寄せ */
+    justify-content: center; /* 左右中央寄せ */
+}
+
+button {
+    height: 100px;
+    width: 80%;
+    font-size: xx-large; /* 文字の大きさ */
+    border-radius: 30px; /* 丸み */
+    background: #FFD5EC; /* 背景色 */
+    color: #000; /* 文字の色 */
+    margin:  30px; /* 上下左右の余白(外側) */
+    border: none; /* 枠線削除 */
+    cursor: pointer; /* カーソル変更 */
+}
+
+button:hover {
+    background: #ff99cc; /* 背景色 */
+}
+
+/* モーダル */
+#modal {
+    background: rgba(0, 0, 0, 0.5); /* 背景 */
+    display: none; /* 非表示 */
+    position: fixed; 
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    flex-flow: column; /* 縦並び */
+    align-items: center; /* 上下中央寄せ */
+    justify-content: center; /* 左右中央寄せ */
+}
+
+.content {
+    width: 60%;
+    border-radius: 20px; /* 丸み */
+    padding: 60px; /* 上下左右の余白(内側) */
+    background: #fff; /* 背景 */
+}
+
+p {
+    font-size: xx-large; /* 文字の大きさ */
+    margin: 20px; /* 上下左右の余白(外側) */
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-between; /* 横並び */
+}
+
+#confirm {
+    width: 50%;
+    background: #ff9999; /* 背景 */
+}
+
+#cancel {
+    width: 50%;
+    background: #99ccff; /* 背景 */
+}
+
+#confirm:hover {
+    background: #ff6666;
+}
+
+#cancel:hover {
+    background: #66b2ff;
+}
+
+

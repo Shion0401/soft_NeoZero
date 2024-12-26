@@ -1,0 +1,51 @@
+<!--ユーザのメールアドレス変更画面-->
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <link href="mail-change.css" rel="stylesheet" />
+    <meta name="viewport" content="width=device-width" />
+    <title>PawLovers_mail-change</title>
+  </head>
+
+  <body>
+    <div class="left">
+      <button id="main-btn" onclick="location.href='./main.html'">トップページへ戻る</button>
+      <div id="advertisement">広告</div>
+    </div>
+
+    <div class="center">
+      <div id="mail">メールアドレス変更</div>
+      <p id="error-message"></p>
+      <input type="email" id="now-email" placeholder="今のメールアドレス" />
+      <input type="email" id="new-email" placeholder="新しいメールアドレス" />
+      <input type="password" id="now-password" placeholder="今のパスワード" />
+      <button id="ok">OK</button>
+    </div>
+
+    <div class="right">
+      <div id="advertisement2">広告</div>
+    </div>
+
+    <script>
+      const ok = document.getElementById('ok'); //OKボタン取得
+      const errorMessage = document.getElementById('error-message'); //エラーメッセージ取得
+
+      // OKボタンが押された時
+      ok.addEventListener('click', () => {
+          const nowEmail = document.getElementById('now-email').value; //今のメールアドレス取得
+          const newEmail = document.getElementById('new-email').value; //新しいメールアドレス取得
+          const nowPassword = document.getElementById('now-password').value; //今のパスワード取得
+
+          if (!nowEmail && !newEmail && !nowPassword) { //入力欄が空白の時
+              errorMessage.textContent = '※間違っています。もう一度入力してください。'; //エラーメッセージを表示させる
+              return;
+          }else if (nowEmail === 'admin@example.com' && nowPassword === 'password123') { //成功時
+              window.location.href = './change.html'; // 会員情報変更画面に遷移
+          } else { //失敗時
+              errorMessage.textContent = '※間違っています。もう一度入力してください。'; //エラーメッセージを表示させる
+          }
+      });
+    </script>
+  </body>
+</html>

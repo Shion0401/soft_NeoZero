@@ -1,0 +1,54 @@
+<!--管理者のトップページ-->
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <link href="admi-top.css" rel="stylesheet" />
+  <meta name="viewport" content="width=device-width" />
+  <title>PawLovers_admi-top</title>
+</head>
+
+<body>
+  <div id="title">トップページ</div>
+
+  <div id="white">
+    <button onclick="location.href='./admi-advertisement.html'">広告管理</button>
+    <button onclick="location.href='./admi-illegal-user.html'">違法ユーザ管理</button>
+    <button id="logout">ログアウト</button>
+  </div>
+
+  <!-- モーダル -->
+  <div id="modal">
+    <div class="content">
+      <p>ログアウトしますか？</p>
+      <div class="buttons">
+        <button id="confirm">はい</button>
+        <button id="cancel">いいえ</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const logout = document.getElementById("logout"); //ログアウトボタン取得
+    const modal = document.getElementById("modal"); //モーダル取得
+    const confirm = document.getElementById("confirm"); //はいボタン取得
+    const cancel = document.getElementById("cancel"); //いいえボタン取得
+
+    // ログアウトボタンが押されたとき
+    logout.addEventListener("click", () => {
+      modal.style.display = "flex"; // モーダルを表示
+    });
+
+    // はいボタンが押されたとき
+    confirm.addEventListener("click", () => {
+      location.href = "./admi-login.html"; // ログインページに遷移
+    });
+
+    // いいえボタンが押されたとき
+    cancel.addEventListener("click", () => {
+      modal.style.display = "none"; // モーダルを非表示
+    });
+
+  </script>
+</body>
+</html>

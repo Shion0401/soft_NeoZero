@@ -1,0 +1,31 @@
+/* ユーザの利用規約のCSS */
+/* ボタンを押すとエラーが表示される
+　　 本来はエラー表示はされない。ログインの時にエラー表示がされる */
+
+body{
+    height: 50px;
+    width:50%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+
+#term{
+    border:solid 1px #000;
+    font-size: xx-large;
+    color: #FFD5EC;
+}
+
+#context{
+    background: #CEE6C1;
+}
+
+#agree{
+    background: #FFD5EC;
+    font-size: xx-large;
+    color: #000000;
+}
+
+#error-message{
+    color: red;
+}

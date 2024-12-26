@@ -1,0 +1,58 @@
+/* ユーザのトップページのCSS */
+body {
+    background-color: #FFD5EC;
+    margin: 0;
+}
+
+.top {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px 0;
+}
+
+#pawlovers-img {
+    width: 30%; 
+    border: 1px solid;
+    border-radius: 20px;
+}
+
+button {
+    font-size: xx-large; 
+    width: 30%; 
+    border: none;
+    cursor: pointer;
+    border-radius: 20px;
+}
+
+#post-btn {
+    background: #b09bd1; 
+}
+
+#mypage-btn {
+    background: #FF9999;
+}
+
+#post-btn:hover {
+    background: #9a88c7;
+}
+
+#mypage-btn:hover {
+    background: #FF6666; 
+}
+
+.bottom {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px 0;
+}
+
+.advertisement, .media {
+    width: 20%;
+    height: 500px;
+    border: 1px solid;
+    text-align: center;
+}
+
+.media {
+    width: 50%;
+}
